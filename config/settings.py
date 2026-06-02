@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-ems-change-in-production-use-env-vars'
 
-DEBUG = True  # Set to False in production
+DEBUG = False  # Set to False in production
 
 ALLOWED_HOSTS = ['*']
 
@@ -105,8 +105,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 # Written inside the Environment variable
-# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
