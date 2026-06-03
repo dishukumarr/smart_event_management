@@ -16,10 +16,10 @@ urlpatterns = [
 
     # ── Events (Public) ────────────────────────
     path('events/', views.event_list, name='event_list'),
+    path('events/create/', views.event_create, name='event_create'),
     path('events/<slug:slug>/', views.event_detail, name='event_detail'),
 
     # ── Events (Manager/Admin) ─────────────────
-    path('events/create/', views.event_create, name='event_create'),
     path('events/<slug:slug>/edit/', views.event_edit, name='event_edit'),
     path('events/<slug:slug>/delete/', views.event_delete, name='event_delete'),
     path('my-events/', views.manager_events, name='manager_events'),
